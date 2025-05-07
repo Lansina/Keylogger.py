@@ -1,0 +1,29 @@
+[2025-05-07 19:21:30] Char: t
+[2025-05-07 19:21:30] Char: e
+[2025-05-07 19:21:30] Char: s
+[2025-05-07 19:21:30] Char: t
+[2025-05-07 19:21:30] Char: i
+[2025-05-07 19:21:30] Char: n
+[2025-05-07 19:21:31] Char: g
+[2025-05-07 19:21:31] Special Key: Key.space
+[2025-05-07 19:21:31] Char: t
+[2025-05-07 19:21:31] Char: e
+[2025-05-07 19:21:31] Char: s
+[2025-05-07 19:21:31] Char: t
+[2025-05-07 19:21:31] Char: i
+[2025-05-07 19:21:31] Char: n
+[2025-05-07 19:21:32] Char: g
+[2025-05-07 19:21:32] Special Key: Key.space
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Special Key: Key.ctrl_l
+[2025-05-07 19:21:38] Char: 
+[2025-05-07 19:25:41] Char: t[2025-05-07 19:25:41] Char: h[2025-05-07 19:25:41] Char: i[2025-05-07 19:25:41] Char: s[2025-05-07 19:25:41] Special Key: Key.space[2025-05-07 19:25:41] Char: i[2025-05-07 19:25:41] Char: s[2025-05-07 19:25:42] Special Key: Key.space[2025-05-07 19:25:42] Char: a[2025-05-07 19:25:42] Special Key: Key.space[2025-05-07 19:25:42] Char: t[2025-05-07 19:25:42] Char: e[2025-05-07 19:25:42] Char: s[2025-05-07 19:25:42] Char: t[2025-05-07 19:25:43] Special Key: Key.space[2025-05-07 19:25:43] Special Key: Key.space[2025-05-07 19:25:43] Special Key: Key.space[2025-05-07 19:25:46] Special Key: Key.ctrl_l[2025-05-07 19:25:47] Char: 
